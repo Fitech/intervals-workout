@@ -1,0 +1,208 @@
+.workout-form-container {
+  background: white;
+  max-width: 1200px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+
+.workout-form-container h2 {
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.intervals-table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 120px 100px 1.5fr 1fr 0.5fr 1fr;
+  gap: 2rem;
+  padding: 0.75rem 0;
+  align-items: center;
+}
+
+.table-header {
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.table-row {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-footer {
+  display: flex;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #eee;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+/* Time Input Styling */
+.time-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.time-input input {
+  width: 40px;
+  min-width: 0;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.interval-sets {
+  width: 40px;
+  text-align: center;
+}
+
+.time-input .intensity-label {
+  margin-left: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.time-input .intensity-input {
+  width: 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+time-input span {
+  color: #666;
+  font-weight: bold;
+}
+
+/* Regular Inputs */
+input[type="number"],
+select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Hide number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.interval-total {
+  font-weight: 500;
+} 
+
+.total-time {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.btn.danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn.remove-interval, .btn.add-interval {
+  height: 36px;
+  width: fit-content;
+  padding: 0 24px;
+}
+
+.btn.add-interval {
+  background-color: #1e8540;
+  color: white;
+  margin: 0 1rem 0 0;
+}
+
+.btn.danger:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-header,
+  .table-row,
+  .table-footer {
+    font-size: 0.9rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+}
